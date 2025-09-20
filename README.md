@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# 🎬 PrimeFlix - Catálogo de Filmes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um site moderno e responsivo construído com React para explorar uma lista de filmes que estão em cartaz no momento. Cada filme é apresentado em um card interativo, com a opção de ver detalhes, salvar nos favoritos e assistir ao trailer.
 
-## Available Scripts
+## ✨ Demonstração (Preview)
 
-In the project directory, you can run:
+![PrimeFlix Screenshot](./public/screenshot.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Funcionalidades
 
-### `npm test`
+- **Listagem de Filmes em Cartaz:** Navegue por uma grade com os filmes mais recentes.
+- **Página de Detalhes:** Acesse uma página dedicada para cada filme com sinopse, avaliação e outras informações.
+- **Salvar Filmes Favoritos:** Adicione e remova filmes de uma lista de favoritos que fica salva no seu navegador (`localStorage`).
+- **Notificações:** Receba feedback visual ao salvar ou remover um filme.
+- **Link para o Trailer:** Acesse uma busca no YouTube pelo trailer do filme diretamente da página de detalhes.
+- **Página de Erro:** Uma página amigável para rotas não encontradas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React:** Biblioteca para construção da interface de usuário.
+- **Create React App:** Ambiente de desenvolvimento para aplicações React.
+- **React Router DOM:** Para gerenciamento das rotas da aplicação.
+- **Axios:** Para realizar as requisições à API de filmes.
+- **React Toastify:** Para exibir notificações ao usuário.
+- **CSS Puro:** Para estilização dos componentes.
+- **The Movie Database (TMDb) API:** Para obtenção dos dados dos filmes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📦 Instalação e Uso
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Siga os passos abaixo para executar o projeto em seu ambiente local.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Pré-requisitos:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Node.js](https://nodejs.org/en/) (versão LTS recomendada)
+- [Git](https://git-scm.com/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Passo a passo:**
 
-## Learn More
+1.  **Clone o repositório:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    git clone https://github.com/jotalucasfarias/primeflix.git
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2.  **Acesse a pasta do projeto:**
 
-### Code Splitting
+    ```bash
+    cd primeflix
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3.  **Instale as dependências:**
 
-### Analyzing the Bundle Size
+    ```bash
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4.  **Configure as variáveis de ambiente:**
 
-### Making a Progressive Web App
+    - Crie um arquivo chamado `.env` na raiz do projeto.
+    - Adicione sua chave da API do TMDb a este arquivo, como no exemplo abaixo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    ```properties
+    // filepath: .env
+    REACT_APP_API_KEY=SUA_CHAVE_DA_API_AQUI
+    ```
 
-### Advanced Configuration
+5.  **Execute a aplicação:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    ```bash
+    npm start
+    ```
 
-### Deployment
+6.  Abra seu navegador e acesse `http://localhost:3000` (ou a porta indicada no terminal).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📄 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está sob a licença MIT.
+
+---
+
+## 👤 Autor
+
+**João Lucas Farias da Silva**
+
+- 📧 **Email:** jotalucasfarias@gmail.com
+- 🌐 **GitHub:** [@jotalucasfarias](https://github.com/jotalucasfarias)
+- 💼 **LinkedIn:** [linkedin.com/in/jottalucasfarias](https://www.linkedin.com/in/jottalucasfarias/)
