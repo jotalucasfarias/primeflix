@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
-import "./favoritos.css";
-import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import './favoritos.css';
+
 function Favoritos() {
   const [filmes, setFilmes] = useState([]);
 
   useEffect(() => {
-    const minhaLista = localStorage.getItem("@primeFlix");
+    const minhaLista = localStorage.getItem('@primeFlix');
     setFilmes(JSON.parse(minhaLista) || []);
   }, []);
 
@@ -16,27 +17,35 @@ function Favoritos() {
     });
 
     setFilmes(filtroFilmes);
-    localStorage.setItem("@primeFlix", JSON.stringify(filtroFilmes));
-    toast.success("Filme excluído com sucesso!");
+    localStorage.setItem('@primeFlix', JSON.stringify(filtroFilmes));
+    toast.success('Filme excluído com sucesso!');
   }
 
   return (
-    <div className="meus-filmes">
-      <h1>Meus Filmes</h1>
-      {filmes.length === 0 && <span>Voce não tem nenhum filme salvo!</span>}
-      <ul>
+    <div className="favoritos-container">
+      <h1 className="page-title">Meus Filmes Favoritos</h1>
+      {filmes.length === 0 && (
+        <span className="lista-vazia">Você ainda não salvou nenhum filme!</span>
+      )}
+      <div className="favoritos-grid">
         {filmes.map((item) => {
           return (
-            <li key={item.id}>
-              <span>{item.title}</span>
-              <div>
-                <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
-                <button onClick={() => excluirFilme(item.id)}>Excluir</button>
+            <article key={item.id} className="favorito-card">
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+                alt={item.title}
+              />
+              <div className="card-content">
+                <strong>{item.title}</strong>
+                <div className="card-actions">
+                  <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
+                  <button onClick={() => excluirFilme(item.id)}>Excluir</button>
+                </div>
               </div>
-            </li>
+            </article>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 }

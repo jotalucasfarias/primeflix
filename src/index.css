@@ -4,14 +4,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-dark: #141414;
+  --card-background: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --highlight-blue: #007bff;
+  --highlight-blue-hover: #0056b3;
+  --danger-red: #e50914;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
 }
 
 .app {
   display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }

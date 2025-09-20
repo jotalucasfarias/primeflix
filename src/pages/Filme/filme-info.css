@@ -1,57 +1,124 @@
-
-.filme-info {
+/* Container principal para alinhar com o header */
+.filme-container {
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  margin-top: 18px;
+  padding: 2rem;
+}
+
+/* Layout de duas colunas */
+.filme-info {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Coluna da imagem */
+.filme-info img {
+  flex: 1;
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Coluna dos detalhes */
+.filme-details {
+  flex: 2;
   display: flex;
   flex-direction: column;
-  max-width: 800px;
-  padding: 0 8px;
 }
 
-.filme-info h1 {
-  margin: 14px 0;
+.filme-details h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
-.filme-info img {
+.filme-details strong {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.filme-details h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--highlight-blue);
+  padding-bottom: 0.5rem;
+}
+
+.filme-details span {
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.area-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.area-buttons button,
+.area-buttons a {
+  font-size: 1rem;
+  border: 0;
+  outline: none;
+  padding: 12px 24px;
   border-radius: 8px;
-  width: 900px;
-  max-width: 100%;
-  max-height: 340px;
-  object-fit: cover;
-}
-
-.filme-info h3 {
-  margin-top: 14px;
-}
-
-.filme-info span {
-  margin: 8px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .area-buttons button {
-  margin-right: 12px;
-  margin-top: 14px;
-  margin-left: 0;
-  font-size: 20px;
-  border: 0;
-  outline: none;
-  padding: 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.5s;
+  background-color: var(--highlight-blue);
+  color: var(--text-primary);
 }
 
 .area-buttons button:hover {
-  background-color: #0A4378;
-  color: #FFF;
+  background-color: var(--highlight-blue-hover);
+  transform: scale(1.05);
 }
 
 .area-buttons a {
-  text-decoration: none;
-  color: #000;
-  transition: all 0.5s;
+  background-color: #333;
+  color: var(--text-primary);
 }
 
-.area-buttons a:hover{
-  color: #FFF;
+.area-buttons a:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+  .filme-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filme-details {
+    align-items: center;
+    text-align: center;
+  }
+
+  .filme-details h1 {
+    font-size: 2.2rem;
+  }
+
+  .area-buttons {
+    justify-content: center;
+  }
 }
