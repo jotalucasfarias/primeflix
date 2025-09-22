@@ -57,7 +57,7 @@ function Filme() {
 
   if (loading) {
     return (
-      <div className="filme-info">
+      <div className="loading-container">
         <OrbitProgress
           variant="disc"
           color="#2749bb"

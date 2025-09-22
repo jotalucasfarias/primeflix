@@ -6,7 +6,7 @@ function Header() {
     <header>
       <div className="header-content">
         <Link className="logo" to={'/'}>
-          Prime Flix
+          Cine Posters
         </Link>
         <Link className="favoritos" to={'/favoritos'}>
           Meus Filmes

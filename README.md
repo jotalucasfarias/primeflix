@@ -1,4 +1,4 @@
-# 🎬 PrimeFlix - Catálogo de Filmes
+# 🎬 CinePosters - Catálogo de Filmes em Cartaz no Cinema
 
 Um site moderno e responsivo construído com React para explorar uma lista de filmes que estão em cartaz no momento. Cada filme é apresentado em um card interativo, com a opção de ver detalhes, salvar nos favoritos e assistir ao trailer.
 
